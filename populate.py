@@ -18,9 +18,9 @@ def populate(n=10):
         last = fakegen.last_name()
         email = f"{first[0]}{last}@{random.choice(DOMAINS)}".lower()
         
-        new_user = User.objects.get_or_create(fname=first, lname=last, email=email)
+        new_user = User.objects.get_or_create(fname=first, lname=last, email=email)[0]
 
 if __name__ == "__main__":
     print("Populating users table")
-    populate(n=50)
+    populate(n=5)
     print("Finished populating")

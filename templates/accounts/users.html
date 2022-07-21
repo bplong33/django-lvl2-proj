@@ -5,14 +5,16 @@
 
 {% block content %}
     <h1>User List</h1>
+    {% if users %}
     <ol>
-    {% for user in users %}
+        {% for user in users %}
         <li>User Info</li>
         <ul>
             <li>First Name: {{ user.fname }}</li>
             <li>Last Name: {{ user.lname }}</li>
             <li>Email: {{user.email }}</li>
         </ul>
-    {% endfor %}
+        {% endfor %}
     </ol>
+    {% endif %}
 {% endblock content %}
