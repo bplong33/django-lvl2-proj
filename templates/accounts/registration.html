@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+
+{% block title %}Registration{% endblock title %}
+
+{% block content %}
+    <h1>Register!</h1>
+    <form action="" method='POST'>
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="Sign Up!">
+    </form>
+{% endblock content %}
