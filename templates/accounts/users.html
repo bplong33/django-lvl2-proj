@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+{% block title %}User List{% endblock title %}
+
+{% block content %}
+    <h1>User List</h1>
+    <ol>
+    {% for user in users %}
+        <li>User Info</li>
+        <ul>
+            <li>First Name: {{ user.fname }}</li>
+            <li>Last Name: {{ user.lname }}</li>
+            <li>Email: {{user.email }}</li>
+        </ul>
+    {% endfor %}
+    </ol>
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+
+{% block title %}Welcome{% endblock title %}
+
+{% block content %}
+    <h1>Welcome!</h1>
+    <h2>Go to <a href="{% url 'userlist' %}">users</a> to see the list of user information!</h2>
+{% endblock content %}
