@@ -8,7 +8,6 @@ class Index(TemplateView):
 class UserList(TemplateView):
     template_name = "accounts/users.html"
     
-    # def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         data = User.objects.all()
