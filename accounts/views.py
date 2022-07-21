@@ -1,5 +1,3 @@
-from itertools import tee
-from django.shortcuts import render
 from .models import User
 from django.views.generic import TemplateView
 
